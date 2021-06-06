@@ -13,52 +13,38 @@
     width: 90%;
     margin: auto;
 
-    .team__items {
+    .team__members {
       display: flex;
+      flex-flow: row;
+      justify-content: space-evenly;
+
+      .team__member {
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+        box-shadow: 0 6px 20px rgba(15, 56, 133, 0.17);
+        border-radius: 1rem;
+        overflow: hidden;
+        text-decoration: none;
+        .team__member-picture {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          overflow: hidden;
+
+          .cards__item__img {
+            width: 80%;
+            height: auto;
+            transition: all 0.2s linear;
+            &.hover {
+              transform: scale(1.05);
+            }
+          }
+        }
+      }
     }
   }
-}
-
-.cards__item__link {
-  display: flex;
-  flex-flow: column;
-  width: 100%;
-  box-shadow: 0 6px 20px rgba(15, 56, 133, 0.17);
-  -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-  filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-  border-radius: 10px;
-  overflow: hidden;
-  text-decoration: none;
-}
-
-.cards__item__pic-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  overflow: hidden;
-}
-
-.cards__item__img {
-  // position: center;
-  // top: 0;
-  // right: 0;
-  // bottom: 0;
-  // left: 0;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-  width: 80%;
-  // max-width: 100%;
-  height: auto;
-  // max-height: 100%;
-  // object-fit: cover;
-
-  transition: all 0.2s linear;
-}
-
-.cards__item__img:hover {
-  transform: scale(1.05);
 }
 
 .cards__item__info {
@@ -71,10 +57,14 @@
   line-height: 24px;
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 768px) {
   .team {
     .team__container {
-      width: 98%;
+      width: 95%;
+      .team__members {
+        display: flex;
+        flex-flow: column;
+      }
     }
   }
 }
