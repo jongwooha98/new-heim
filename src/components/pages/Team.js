@@ -44,7 +44,7 @@ function TeamMember(props) {
 
 function Teamas() {
   return (
-    <div className="team-section container">
+    <div className="team-section container-fluid">
       <h1>Meet the Team</h1>
       <div className="member__container row">
         <TeamMember
@@ -65,7 +65,7 @@ function Team() {
     <div className="team__container container">
       <h1>MEET THE TEAM</h1>
       <div className="members row">
-        <div className="member__card col-md-4">
+        <div className="member__card col-md-3">
           <div className="member__picture">
             <img
               src={jongwoo}
@@ -73,12 +73,13 @@ function Team() {
               style={{ objectFit: 'cover' }}
             />
           </div>
+
           <div className="member__info">
             <h2 className="name">JONGWOO HA</h2>
             <p className="title">CEO</p>
           </div>
         </div>
-        <div className="member__card col-md-4">
+        <div className="member__card col-md-3">
           <div className="member__picture">
             <img
               src={hyunsub}
@@ -86,12 +87,13 @@ function Team() {
               style={{ marginTop: '1.5rem' }}
             />
           </div>
+
           <div className="member__info">
             <h2 className="name">HYUNSUB LIM</h2>
             <p className="title">CEO</p>
           </div>
         </div>
-        <div className="member__card col-md-4">
+        <div className="member__card col-md-3">
           <div className="member__picture">
             <img
               src={seokha}
@@ -99,6 +101,7 @@ function Team() {
               style={{ marginTop: '1.2rem' }}
             />
           </div>
+
           <div className="member__info">
             <h2 className="name">SEOKHA RYU</h2>
             <p className="title">CEO</p>

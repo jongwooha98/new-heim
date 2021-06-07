@@ -7,7 +7,6 @@
 }
 html,
 body {
-  font-size: $sizeMd1;
   // width: 100vw;
   // height: 100vh;
   margin: 0;
@@ -17,91 +16,27 @@ body {
   // overflow-x: hidden;
 }
 
-// .team-section {
-//   display: flex;
-//   flex-flow: column;
-//   background: #fff;
-//   h1 {
-//     text-align: center;
-//   }
-//   .member__container {
-//     width: 80vw;
-//     margin: 0 auto;
-//     display: flex;
-//     flex-flow: row;
-//     justify-content: space-between;
-//     .member__card {
-//       width: 25vw;
-//       // height: auto;
-//       display: flex;
-//       flex-flow: column;
-//       // align-items: center;
-//       box-shadow: 0 6px 20px rgba(15, 56, 133, 0.17);
-//       // border-radius: 1rem;
-//       // overflow: hidden;
-//       // text-decoration: none;
-//       .member__picture {
-//         // width: 20vw;
-//         // height: auto;
-//         display: block;
-//         justify-content: center;
-//         align-self: center;
-//         align-items: center;
-//         overflow: hidden;
-//         max-width: 100%;
-//         max-height: 80%;
-//         img {
-//           object-fit: fill;
-//           // height: 80%;
-
-//           transition: all 0.2s linear;
-//           &.hover {
-//             transform: scale(1.05);
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-// // .cards__item__info {
-// //   padding: 20px 30px 30px;
-// // }
-
-// // .cards__item__text {
-// //   color: $colorText;
-// //   font-size: 18px;
-// //   line-height: 24px;
-// // }
-
-@media screen and (max-width: 768px) {
-  //   .team-section {
-  //     .member__container {
-  //       width: 95vw;
-
-  //       display: flex;
-  //       flex-flow: column;
-  //       .member__card {
-  //         width: 90vw;
-  //         margin: 0 auto;
-  //       }
-  //     }
-  //   }
+.app {
+  margin: 0;
+  padding: 0;
 }
 
+/* Team Section */
 .team__container {
   h1 {
     text-align: center;
   }
   .members {
+    width: 80vw;
+
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    margin: 0 auto;
     align-items: center;
+
     .member__card {
       display: flex;
       flex-flow: column;
-      // justify-content: center;
-      // align-self: center;
       align-items: center;
 
       .member__picture {
@@ -120,6 +55,7 @@ body {
         }
       }
       .member__info {
+        padding: 1rem 0;
         .name {
         }
         .title {
@@ -127,4 +63,182 @@ body {
       }
     }
   }
+}
+
+/* Contact Section */
+.contact-section {
+  display: flex;
+  flex-flow: row;
+
+  width: 80vw;
+  padding: 5% 0;
+  .contact__email {
+    background-color: #fff;
+    width: 100%;
+    .contact-form {
+      padding: 2% 4% 4% 4%;
+      .contact-image {
+        text-align: center;
+        i {
+          border-radius: 6rem;
+          font-size: 5rem;
+          margin-top: -1%;
+          color: #0062cc;
+        }
+      }
+      h3 {
+        margin: 5% 0;
+        text-align: center;
+        color: #0062cc;
+        font-size: $sizeLg2;
+      }
+      h4 {
+        text-align: center;
+        color: $colorText;
+        font-size: $sizeMd2;
+        &::before {
+          content: 'Interested in working together?';
+          font-weight: bold;
+        }
+      }
+      .form-inputs {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+
+        .form-input {
+          margin-bottom: 1rem;
+
+          label {
+            font-size: $sizeMd1;
+            width: 100%;
+          }
+          .form-control {
+            border-radius: 1rem;
+          }
+          .submit-button {
+            width: 10rem;
+            border: none;
+            border-radius: 1rem;
+            padding: 1%;
+            background: #dc3545;
+            font-size: $sizeMd1;
+            font-weight: 600;
+            color: #fff;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+}
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+.pricing__container {
+}
+.card {
+  position: relative;
+  min-width: 300px;
+  height: auto;
+  overflow: hidden;
+  border-radius: 15px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+}
+.card:hover {
+  transform: scale(1.1);
+}
+.card_red,
+.card_red .title .fa {
+  background: linear-gradient(-45deg, #ffec61, #f321d7);
+}
+.card_violet,
+.card_violet .title .fa {
+  background: linear-gradient(-45deg, #f403d1, #64b5f6);
+}
+.card_three,
+.card_three .title .fa {
+  background: linear-gradient(-45deg, #24ff72, #9a4eff);
+}
+
+.card:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 1;
+  transform: skewY(-5deg) scale(1.5);
+}
+
+.title .fa {
+  color: #fff;
+  font-size: 60px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 100px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+.title h2 {
+  position: relative;
+  margin: 20px 0 0;
+  padding: 0;
+  color: #fff;
+  font-size: 28px;
+  z-index: 2;
+}
+.price {
+  position: relative;
+  z-index: 2;
+}
+.price h4 {
+  margin: 0;
+  padding: 20px 0;
+  color: #fff;
+  font-size: 60px;
+}
+.option {
+  position: relative;
+  z-index: 2;
+}
+.option ul {
+  margin: 0;
+  padding: 0;
+}
+.option ul li {
+  margin: 0 0 10px;
+  padding: 0;
+  list-style: none;
+  color: #fff;
+  font-size: 16px;
+}
+.card a {
+  display: block;
+  position: relative;
+  z-index: 2;
+  background-color: #fff;
+  color: #262fff;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  margin: 20px auto 0;
+  line-height: 40px;
+  border-radius: 40px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.card a:hover {
 }
