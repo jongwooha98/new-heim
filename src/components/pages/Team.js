@@ -6,42 +6,55 @@ import hyunsub from '../../assets/hyunsub.jpeg';
 import seokha from '../../assets/seokha.jpeg';
 
 function SocialMedia(props) {
-  const { skill, icon, logoColor } = props;
+  const { name, icon, href, logoColor } = props;
   return (
-    <>
-      <li>
-        <div
-          className={`${skill} skill`}
-          style={{ backgroundColor: logoColor }}
+    <li>
+      <div className={`${name}`} style={{ backgroundColor: logoColor }}>
+        <a
+          className={`social-media__link ${name}`}
+          href={href}
+          rel="noreferrer"
+          target="_blank"
+          // aria-label="LinkedIn"
         >
-          <a
-            className="social-icon-link linkedin"
-            href="https://www.linkedin.com/in/jongwooha"
-            rel="noreferrer"
-            target="_blank"
-            aria-label="LinkedIn"
-          >
-            <i className="fab fa-linkedin-in" />
-          </a>
-        </div>
-      </li>
-    </>
+          <i className={icon} />
+        </a>
+      </div>
+    </li>
   );
 }
 
 function TeamMember(props) {
   const { picture, name, title } = props;
   return (
-    <div className="member">
-      <div className="member__picture">
-        <img src={picture} alt="Member" className="cards__item__img" />
+    <div className="member__card col-md-4">
+      <div className="member__img-holder">
+        <img src={picture} alt="Member" className="member__img" />
       </div>
-      <div className="cards__item__info">
-        <h5 className="cards__item__text">{name}</h5>
-        <span>{title}</span>
-        <div>
-          <SocialMedia icon="fab fa-instagram" logoColor="#fff" />
-        </div>
+      <div className="member__info">
+        <h5 className="member__name">{name}</h5>
+        <span className="member__title">{title}</span>
+        <ul>
+          <SocialMedia name="linkedin" icon="fab fa-linkedin" />
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+function Teamas() {
+  return (
+    <div className="team-section container">
+      <h1>Meet the Team</h1>
+      <div className="member__container row">
+        <TeamMember
+          picture=""
+          name="JongWoo Ha"
+          title="CEO"
+          linkedinHref="https://www.linkedin.com/in/jongwooha"
+        />
+        <TeamMember picture="" name="HyunSub Lim" title="CEO" />
+        <TeamMember picture="" name="SeokHa Ryu" title="CEO" />
       </div>
     </div>
   );
@@ -49,12 +62,48 @@ function TeamMember(props) {
 
 function Team() {
   return (
-    <div className="team-section">
-      <h1>Meet the Team</h1>
-      <div className="member__container">
-        <TeamMember picture={jongwoo} name="JongWoo Ha" title="CEO" />
-        <TeamMember picture={hyunsub} name="HyunSub Lim" title="CEO" />
-        <TeamMember picture={seokha} name="SeokHa Ryu" title="CEO" />
+    <div className="team__container container">
+      <h1>MEET THE TEAM</h1>
+      <div className="members row">
+        <div className="member__card col-md-4">
+          <div className="member__picture">
+            <img
+              src={jongwoo}
+              alt="jongwoo-ha"
+              style={{ objectFit: 'cover' }}
+            />
+          </div>
+          <div className="member__info">
+            <h2 className="name">JONGWOO HA</h2>
+            <p className="title">CEO</p>
+          </div>
+        </div>
+        <div className="member__card col-md-4">
+          <div className="member__picture">
+            <img
+              src={hyunsub}
+              alt="hyunsub-lim"
+              style={{ marginTop: '1.5rem' }}
+            />
+          </div>
+          <div className="member__info">
+            <h2 className="name">HYUNSUB LIM</h2>
+            <p className="title">CEO</p>
+          </div>
+        </div>
+        <div className="member__card col-md-4">
+          <div className="member__picture">
+            <img
+              src={seokha}
+              alt="seokha-ryu"
+              style={{ marginTop: '1.2rem' }}
+            />
+          </div>
+          <div className="member__info">
+            <h2 className="name">SEOKHA RYU</h2>
+            <p className="title">CEO</p>
+          </div>
+        </div>
       </div>
     </div>
   );
