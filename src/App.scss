@@ -7,11 +7,72 @@
 html,
 body {
   font-size: $sizeMd1;
-  // width: 100vw;
-  // height: 100vh;
+  width: 100vw;
+  height: 100vh;
   margin: 0;
   padding: 0;
   background-color: #fff;
+  font-size: 16px;
 
   // overflow-x: hidden;
+}
+
+.team-section {
+  display: flex;
+  flex-flow: column;
+  background: #fff;
+  h1 {
+    text-align: center;
+  }
+  .member__container {
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    .member {
+      display: flex;
+      flex-flow: column;
+      box-shadow: 0 6px 20px rgba(15, 56, 133, 0.17);
+      border-radius: 1rem;
+      // overflow: hidden;
+      text-decoration: none;
+      .member__picture {
+        display: flex;
+        // align-items: center;
+        justify-content: center;
+        // width: 30rem;
+        // height: 40rem;
+        // overflow: hidden;
+
+        .cards__item__img {
+          transition: all 0.2s linear;
+          &.hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+}
+
+// .cards__item__info {
+//   padding: 20px 30px 30px;
+// }
+
+// .cards__item__text {
+//   color: $colorText;
+//   font-size: 18px;
+//   line-height: 24px;
+// }
+
+@media screen and (max-width: 768px) {
+  .team-section {
+    .member__container {
+      width: 95vw;
+
+      display: flex;
+      flex-flow: column;
+    }
+  }
 }
