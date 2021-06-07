@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/new-heim-website/static/css/main.ba0b9e18.chunk.css",
+    "main.js": "/new-heim-website/static/js/main.0f172144.chunk.js",
+    "main.js.map": "/new-heim-website/static/js/main.0f172144.chunk.js.map",
+    "runtime-main.js": "/new-heim-website/static/js/runtime-main.5ac7872d.js",
+    "runtime-main.js.map": "/new-heim-website/static/js/runtime-main.5ac7872d.js.map",
+    "static/js/2.08ef4308.chunk.js": "/new-heim-website/static/js/2.08ef4308.chunk.js",
+    "static/js/2.08ef4308.chunk.js.map": "/new-heim-website/static/js/2.08ef4308.chunk.js.map",
+    "index.html": "/new-heim-website/index.html",
+    "static/css/main.ba0b9e18.chunk.css.map": "/new-heim-website/static/css/main.ba0b9e18.chunk.css.map",
+    "static/js/2.08ef4308.chunk.js.LICENSE.txt": "/new-heim-website/static/js/2.08ef4308.chunk.js.LICENSE.txt",
+    "static/media/hyunsub.6e68bcd9.jpeg": "/new-heim-website/static/media/hyunsub.6e68bcd9.jpeg",
+    "static/media/jongwoo.23c15e73.png": "/new-heim-website/static/media/jongwoo.23c15e73.png",
+    "static/media/seokha.50fcdcfa.jpeg": "/new-heim-website/static/media/seokha.50fcdcfa.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5ac7872d.js",
+    "static/js/2.08ef4308.chunk.js",
+    "static/css/main.ba0b9e18.chunk.css",
+    "static/js/main.0f172144.chunk.js"
+  ]
+}
