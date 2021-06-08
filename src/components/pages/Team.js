@@ -5,61 +5,6 @@ import jongwoo from '../../assets/jongwoo.png';
 import hyunsub from '../../assets/hyunsub.jpeg';
 import seokha from '../../assets/seokha.jpeg';
 
-function SocialMedia(props) {
-  const { name, icon, href, logoColor } = props;
-  return (
-    <li>
-      <div className={`${name}`} style={{ backgroundColor: logoColor }}>
-        <a
-          className={`social-media__link ${name}`}
-          href={href}
-          rel="noreferrer"
-          target="_blank"
-          // aria-label="LinkedIn"
-        >
-          <i className={icon} />
-        </a>
-      </div>
-    </li>
-  );
-}
-
-function TeamMember(props) {
-  const { picture, name, title } = props;
-  return (
-    <div className="member__card col-md-4">
-      <div className="member__img-holder">
-        <img src={picture} alt="Member" className="member__img" />
-      </div>
-      <div className="member__info">
-        <h5 className="member__name">{name}</h5>
-        <span className="member__title">{title}</span>
-        <ul>
-          <SocialMedia name="linkedin" icon="fab fa-linkedin" />
-        </ul>
-      </div>
-    </div>
-  );
-}
-
-function Teamas() {
-  return (
-    <div className="team-section container-fluid">
-      <h1>Meet the Team</h1>
-      <div className="member__container row">
-        <TeamMember
-          picture=""
-          name="JongWoo Ha"
-          title="CEO"
-          linkedinHref="https://www.linkedin.com/in/jongwooha"
-        />
-        <TeamMember picture="" name="HyunSub Lim" title="CEO" />
-        <TeamMember picture="" name="SeokHa Ryu" title="CEO" />
-      </div>
-    </div>
-  );
-}
-
 function Team() {
   return (
     <div className="team__container container">

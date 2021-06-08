@@ -34,7 +34,7 @@ function Pricing() {
                 </li>
               </ul>
             </div>
-            <a href="">Order Now</a>
+            <a href="/">Order Now</a>
           </div>
         </div>
         <div class="col-md-4">
@@ -65,7 +65,7 @@ function Pricing() {
                 </li>
               </ul>
             </div>
-            <a href="#">Order Now</a>
+            <a href="/">Order Now</a>
           </div>
         </div>
         <div class="col-md-4">
@@ -96,7 +96,7 @@ function Pricing() {
                 </li>
               </ul>
             </div>
-            <a href="#">Order Now</a>
+            <a href="/">Order Now</a>
           </div>
         </div>
       </div>
