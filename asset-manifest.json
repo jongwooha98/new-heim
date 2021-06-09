@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/new-heim-website/static/css/main.4e064acf.chunk.css",
-    "main.js": "/new-heim-website/static/js/main.af793a73.chunk.js",
-    "main.js.map": "/new-heim-website/static/js/main.af793a73.chunk.js.map",
-    "runtime-main.js": "/new-heim-website/static/js/runtime-main.5ac7872d.js",
-    "runtime-main.js.map": "/new-heim-website/static/js/runtime-main.5ac7872d.js.map",
-    "static/js/2.e7e5562f.chunk.js": "/new-heim-website/static/js/2.e7e5562f.chunk.js",
-    "static/js/2.e7e5562f.chunk.js.map": "/new-heim-website/static/js/2.e7e5562f.chunk.js.map",
-    "index.html": "/new-heim-website/index.html",
-    "static/css/main.4e064acf.chunk.css.map": "/new-heim-website/static/css/main.4e064acf.chunk.css.map",
-    "static/js/2.e7e5562f.chunk.js.LICENSE.txt": "/new-heim-website/static/js/2.e7e5562f.chunk.js.LICENSE.txt",
-    "static/media/hyunsub.6e68bcd9.jpeg": "/new-heim-website/static/media/hyunsub.6e68bcd9.jpeg",
-    "static/media/jongwoo.23c15e73.png": "/new-heim-website/static/media/jongwoo.23c15e73.png",
-    "static/media/seokha.50fcdcfa.jpeg": "/new-heim-website/static/media/seokha.50fcdcfa.jpeg"
+    "main.css": "/new-heim/static/css/main.6b0903d5.chunk.css",
+    "main.js": "/new-heim/static/js/main.2233aeb4.chunk.js",
+    "main.js.map": "/new-heim/static/js/main.2233aeb4.chunk.js.map",
+    "runtime-main.js": "/new-heim/static/js/runtime-main.43e008e5.js",
+    "runtime-main.js.map": "/new-heim/static/js/runtime-main.43e008e5.js.map",
+    "static/js/2.718823ff.chunk.js": "/new-heim/static/js/2.718823ff.chunk.js",
+    "static/js/2.718823ff.chunk.js.map": "/new-heim/static/js/2.718823ff.chunk.js.map",
+    "index.html": "/new-heim/index.html",
+    "static/css/main.6b0903d5.chunk.css.map": "/new-heim/static/css/main.6b0903d5.chunk.css.map",
+    "static/js/2.718823ff.chunk.js.LICENSE.txt": "/new-heim/static/js/2.718823ff.chunk.js.LICENSE.txt",
+    "static/media/hyunsub.6e68bcd9.jpeg": "/new-heim/static/media/hyunsub.6e68bcd9.jpeg",
+    "static/media/jongwoo.23c15e73.png": "/new-heim/static/media/jongwoo.23c15e73.png",
+    "static/media/seokha.50fcdcfa.jpeg": "/new-heim/static/media/seokha.50fcdcfa.jpeg",
+    "static/media/App.scss": "/new-heim/static/media/seoul.e45f06a5.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.5ac7872d.js",
-    "static/js/2.e7e5562f.chunk.js",
-    "static/css/main.4e064acf.chunk.css",
-    "static/js/main.af793a73.chunk.js"
+    "static/js/runtime-main.43e008e5.js",
+    "static/js/2.718823ff.chunk.js",
+    "static/css/main.6b0903d5.chunk.css",
+    "static/js/main.2233aeb4.chunk.js"
   ]
 }
