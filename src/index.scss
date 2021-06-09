@@ -1,4 +1,6 @@
-@import './style.scss';
+@import './sass/variables.scss';
+@import './sass/mixins.scss';
+
 * {
   box-sizing: border-box;
 }
@@ -6,10 +8,8 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Epilogue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
 }
 
 code {

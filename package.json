@@ -1,6 +1,6 @@
 {
-  "homepage": "http://jongwooha98.github.io/new-heim-website",
-  "name": "new-heim-website",
+  "homepage": "http://jongwooha98.github.io/new-heim",
+  "name": "new-heim",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

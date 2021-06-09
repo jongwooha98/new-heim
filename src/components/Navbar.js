@@ -4,7 +4,7 @@ import './Navbar.scss';
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-md sticky-top navbar-light">
+    <nav className="navbar navbar-expand-md sticky-top navbar-dark">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
           NEW HEIM
@@ -28,7 +28,7 @@ function Navbar() {
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
               <Link className="nav-link" to="/about">
-                About
+                About Us
               </Link>
             </li>
             <li className="nav-item">

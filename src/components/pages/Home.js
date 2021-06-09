@@ -5,8 +5,8 @@ import { Button } from '../Button';
 function Home() {
   return (
     <div className="home__container container-fluid">
-      <h1>NEW HEIM</h1>
-      <p>LEADING THE NEW WAVE OF C</p>
+      <h1>New Heim</h1>
+      <p>Food is our common ground, a universial experience</p>
       <div className="home__btns">
         <Button
           linkTo="/contact"

@@ -1,4 +1,5 @@
-@import '../style.scss';
+@import '../sass/variables.scss';
+@import '../sass/mixins.scss';
 
 :root {
   --primary: #fff;
@@ -29,16 +30,16 @@
 
 .btn--small {
   padding: 0.5rem 1rem;
-  font-size: $sizeMd2;
+  font-size: $sizeXSm;
 }
 .btn--medium {
   padding: 0.5rem 1rem;
-  font-size: $sizeMd3;
+  font-size: $sizeSm;
 }
 
 .btn--large {
   padding: 0.5rem 1rem;
-  font-size: $sizeLg1;
+  font-size: $sizeMd;
 }
 
 .btn--medium:hover,
@@ -48,14 +49,14 @@
   transition: all 0.3s ease-out;
 }
 
-@media screen and (max-width: 768px) {
-  .btn--small {
-    font-size: $sizeSm2;
-  }
-  .btn--medium {
-    font-size: $sizeSm3;
-  }
-  .btn--large {
-    font-size: $sizeMd1;
-  }
-}
+// @media screen and (max-width: 768px) {
+//   .btn--small {
+//     font-size: $sizeSm;
+//   }
+//   .btn--medium {
+//     font-size: $sizeMd;
+//   }
+//   .btn--large {
+//     font-size: $sizeLg;
+//   }
+// }

@@ -1,0 +1,19 @@
+@import './variables.scss';
+
+@mixin --viewportSm {
+  @media (min-width: $breakpointSm) {
+    @content;
+  }
+}
+
+@mixin --viewportMd {
+  @media (min-width: $breakpointMd) {
+    @content;
+  }
+}
+
+@mixin --viewportLg {
+  @media (min-width: $breakpointLg) {
+    @content;
+  }
+}
