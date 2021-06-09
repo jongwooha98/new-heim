@@ -1,8 +1,9 @@
 @import '../style.scss';
 
 .navbar {
-  // box-sizing: border-box;
-  background-color: $colorGrey;
+  height: 5rem;
+  max-width: 100% !important;
+  background-color: transparent;
   .container-fluid {
     width: 80%;
     margin: 0 auto;
@@ -18,19 +19,18 @@
         text-align-last: center;
         .nav-item {
           border-radius: 3rem;
-          padding: 1rem;
+          padding: 0.5rem 1rem;
           Link.nav-link {
             color: $colorText;
             font-size: $sizeMd1;
+          }
+          &:hover {
+            color: #fff;
           }
         }
         .nav-item:hover {
           background-color: lighten($colorPrimary, 15%);
           box-shadow: 0 6px 20px rgba(15, 56, 133, 0.17);
-
-          Link.nav-link {
-            color: #fff;
-          }
         }
       }
     }
@@ -39,9 +39,15 @@
 
 @media screen and (max-width: 768px) {
   .navbar {
-    .navbar__container {
+    .container-fluid {
       width: 100vw;
+
       margin: 0 auto;
+
+      .navbar-collapse {
+        box-shadow: inset 0 0 0 100rem rgba(245, 245, 245, 0.7);
+        border-radius: 0 0 1rem 1rem;
+      }
     }
   }
 }

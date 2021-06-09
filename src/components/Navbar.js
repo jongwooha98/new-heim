@@ -4,7 +4,7 @@ import './Navbar.scss';
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg sticky-top navbar-light">
+    <nav className="navbar navbar-expand-md sticky-top navbar-light">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
           NEW HEIM

@@ -1,10 +1,12 @@
+@import '../style.scss';
+
 :root {
   --primary: #fff;
 }
 
 .btn {
-  padding: 8px 20px;
-  border-radius: 2px;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
   outline: none;
   border: none;
   cursor: pointer;
@@ -12,26 +14,31 @@
 
 .btn--primary {
   background-color: var(--primary);
-  color: #242424;
+  color: $colorText;
   border: 1px solid var(--primary);
 }
 
 .btn--outline {
-  background-color: transparent;
+  background-color: rgba(245, 245, 245, 0.4);
   color: #fff;
-  padding: 8px 20px;
+  // text-shadow: -1px 1px 2px $colorText, 1px 1px 2px $colorText,
+  //   1px -1px 0 $colorText, -1px -1px 0 $colorText;
   border: 1px solid var(--primary);
   transition: all 0.3s ease-out;
 }
 
+.btn--small {
+  padding: 0.5rem 1rem;
+  font-size: $sizeMd2;
+}
 .btn--medium {
-  padding: 8px 20px;
-  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: $sizeMd3;
 }
 
 .btn--large {
-  padding: 8px 20px;
-  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: $sizeLg1;
 }
 
 .btn--medium:hover,
@@ -39,4 +46,16 @@
   background: #fff;
   color: #242424;
   transition: all 0.3s ease-out;
+}
+
+@media screen and (max-width: 768px) {
+  .btn--small {
+    font-size: $sizeSm2;
+  }
+  .btn--medium {
+    font-size: $sizeSm3;
+  }
+  .btn--large {
+    font-size: $sizeMd1;
+  }
 }

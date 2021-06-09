@@ -8,7 +8,7 @@ import seokha from '../../assets/seokha.jpeg';
 function Team() {
   return (
     <div className="team__container container">
-      <h1>MEET THE TEAM</h1>
+      <h2>MEET THE TEAM</h2>
       <div className="members row">
         <div className="member__card col-md-3">
           <div className="member__picture">
