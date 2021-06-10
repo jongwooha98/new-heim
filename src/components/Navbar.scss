@@ -5,57 +5,52 @@
   height: 5rem;
   max-width: 100% !important;
   background-color: transparent;
-  .container-fluid {
-    width: 80%;
-    margin: 0 auto;
+  .navbar__container {
+    // width: 90%;
+    // margin: auto;
+
     .navbar-brand {
+      padding-left: 1rem;
       color: $colorText;
       font-size: $sizeSm;
-      margin: 0 0 0 2rem;
-    }
-    .navbar-toggler {
-      .navbar-toggler-icon {
-        color: $colorText;
-        text-decoration: none;
+      @include --viewportMd {
+        font-size: $sizeSm;
       }
     }
-    .navbar-collapse {
-      .navbar-nav {
-        text-align: justify; /* For Edge */
-        -moz-text-align-last: center; /* For Firefox prior 58.0 */
-        text-align-last: center;
-        .nav-item {
-          border-radius: 3rem;
-          padding: 0.5rem 1rem;
-          &:hover {
-            background-color: lighten($colorPrimary, 15%);
-            box-shadow: 0 6px 20px rgba(15, 56, 133, 0.17);
-            .nav-link {
-              color: #fff;
-            }
-          }
+    .navbar-toggler {
+      text-decoration: none;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      // @include --rippleEffect;
+    }
+    .toggler-icon {
+      font-size: $sizeSm;
+      color: $colorText;
+    }
+  }
+  .navbar-collapse {
+    .navbar-nav {
+      text-align: center; /* For Edge */
+      -moz-text-align-last: center; /* For Firefox prior 58.0 */
+      text-align-last: center;
+      .nav-item {
+        border-radius: 3rem;
+        padding: 0.5rem 1rem;
+        // @include --rippleEffect;
+
+        &:hover {
+          background-color: lighten($colorPrimary, 15%);
+          box-shadow: 0 6px 20px rgba(15, 56, 133, 0.17);
           .nav-link {
-            color: $colorText;
-            font-size: $sizeSm;
+            color: #fff;
           }
+        }
+        .nav-link {
+          color: $colorText;
+          font-size: $sizeSm;
         }
       }
     }
   }
 }
-
-// @media screen and (max-width: 768px) {
-//   .navbar {
-//     // box-shadow: inset 0 0 0 100rem rgba(245, 245, 245, 0.7);
-//     // border-radius: 0 0 1rem 1rem;
-//     .container-fluid {
-//       width: 100vw;
-//       margin: 0 auto;
-
-//       .navbar-collapse {
-//         // box-shadow: inset 0 0 0 100rem rgba(245, 245, 245, 0.7);
-//         // border-radius: 0 0 1rem 1rem;
-//       }
-//     }
-//   }
-// }
