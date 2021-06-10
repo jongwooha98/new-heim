@@ -9,19 +9,18 @@ function Home() {
       <p>Food is our common ground, a universial experience</p>
       <div className="home__btns">
         <Button
-          linkTo="/contact"
-          className="btns"
-          buttonStyle="btn--outline"
-          buttonSize="btn--medium"
-        >
-          CONTACT
-        </Button>
-        <Button
-          className="btns"
+          linkTo="/about"
           buttonStyle="btn--primary"
           buttonSize="btn--medium"
         >
           EXPLORE
+        </Button>
+        <Button
+          linkTo="/contact"
+          buttonStyle="btn--outline"
+          buttonSize="btn--medium"
+        >
+          CONTACT
         </Button>
       </div>
     </div>
