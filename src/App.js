@@ -14,6 +14,7 @@ function App() {
       <div className="app container-fluid">
         <Router>
           <Navbar />
+
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/about" component={About} />

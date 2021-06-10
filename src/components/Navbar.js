@@ -7,7 +7,7 @@ import logo from '../assets/logo.png';
 function Navbar() {
   // const [expanded, setExpanded] = useState('');
   return (
-    <nav className="navbar navbar-expand-md sticky-top navbar-dark">
+    <nav className="navbar navbar-expand-md sticky-top navbar-dark ">
       <div className="navbar__container container-fluid">
         <Link className="navbar-brand" to="/">
           NEW HEIM
@@ -29,41 +29,41 @@ function Navbar() {
           id="navbarToggler"
         >
           <ul className="navbar-nav mr-auto">
-            <li class="nav-item dropdown">
+            <li className="nav-item">
+              <Link className="nav-link" to="/">
+                Home
+              </Link>
+            </li>
+            <li className="nav-item dropdown">
               <a
-                class="btn btn-secondary dropdown-toggle"
-                href="#"
+                className="nav-link dropdown-toggler"
                 role="button"
                 id="dropdownMenuLink"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Dropdown link
+                About
               </a>
 
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <li>
-                  <a class="dropdown-item" href="#">
-                    Action
+                  <Link className="dropdown-item" to="/team">
+                    Who we are
+                  </Link>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="/team">
+                    What we offer
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Something else here
+                  <a className="dropdown-item" href="team">
+                    Meet the team
                   </a>
                 </li>
               </ul>
             </li>
-            <li className="nav-item active">
-              <Link className="nav-link" to="/about">
-                About Us
-              </Link>
-            </li>
+
             <li className="nav-item">
               <Link className="nav-link" to="/pricing">
                 Pricing
