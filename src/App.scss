@@ -24,7 +24,9 @@ body {
 //
 /* Home Section */
 .home__container {
-  margin-top: -5rem;
+  z-index: 99;
+  margin-top: -3rem;
+  // margin-bottom: -5rem;
   padding: 0;
   background: url('./assets/seoul.jpg') center center/cover no-repeat;
   // overflow: hidden;

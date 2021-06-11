@@ -2,16 +2,13 @@
 @import '../sass/mixins.scss';
 
 .navbar {
-  height: 5rem;
-  // max-width: 100% !important;
-  background-color: transparent;
+  height: 3rem;
+  max-width: 100% !important;
+
+  background: rgba(256, 256, 256, 0.2);
+  padding: 0;
 
   .navbar__container {
-    // margin: 0;
-    // padding: 0;
-    // width: 90%;
-    // margin: auto;
-
     .navbar-brand {
       padding-left: 1rem;
       color: $colorText;
@@ -33,14 +30,48 @@
     }
   }
   .navbar-collapse {
-    // @include --viewportMd {
-    //   background-color: transparent;
-    // }
+    //
+    width: 100%;
+    background: white;
+    position: fixed;
+    z-index: 9;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s;
+    //
+    &.show {
+      min-height: 100vh;
+      visibility: visible;
+      opacity: 1;
+      z-index: 9;
+      .navbar-nav {
+        .nav-item {
+          opacity: 1;
+        }
+      }
+    }
+
     .navbar-nav {
       text-align: center; /* For Edge */
       -moz-text-align-last: center; /* For Firefox prior 58.0 */
       text-align-last: center;
 
+      //
+      position: absolute;
+      top: 100px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      //
       .nav-item {
         border-radius: 3rem;
         padding: 0.5rem 1rem;
@@ -58,35 +89,6 @@
           font-size: $sizeMd;
           @include --viewportMd {
             font-size: $sizeSm;
-          }
-        }
-      }
-      .dropdown {
-        .dropdown-toggler:active {
-          /*Without this, clicking will make it sticky*/
-          pointer-events: none;
-        }
-        .dropdown-menu {
-          background-color: transparent;
-          border: none;
-          text-transform: capitalize;
-
-          .dropdown-item {
-            border-radius: 3rem;
-            padding: 0.5rem 1rem;
-            @include --rippleEffect;
-
-            color: $colorText;
-            font-size: $sizeSm;
-            text-align: center;
-          }
-        }
-        &:hover {
-          .dropdown-menu {
-            display: block;
-            .dropdown-item {
-              text-align: center;
-            }
           }
         }
       }
