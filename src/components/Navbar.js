@@ -73,7 +73,7 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/about" onClick={handleCollapse}>
-                Gallery
+                Recipes
               </Link>
             </li>
             <li className="nav-item">

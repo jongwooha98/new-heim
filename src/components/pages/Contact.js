@@ -1,7 +1,36 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 
 import '../../App.scss';
+require('dotenv').config();
+const nodemailer = require('nodemailer');
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true,
+  auth: {
+    user: process.env.NODEMAILER_USER,
+    pass: process.env.NODEMAILER_PASSWORD,
+  },
+});
+async function sendEmail() {
+  const info = await transporter.sendMail({
+    from: '"test nodemailer function" <test@gmail.com>',
+    to: `${process.env.NODEMAILER_USER}`,
+    subject: 'nodemailer test SUBJECT',
+    text: 'nodemailer test TEXT',
+    html: '<b>HELLO NODEMAILER</b>',
+  });
+  console.log('Message sent: %s', info.messageId);
+  // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
+
+  // res.status(200).json({
+  //   status: 'Success',
+  //   code: 200,
+  //   message: 'Sent Auth Email',
+  // });
+}
 
 function Contact() {
   const [state, setState] = useState({
@@ -11,28 +40,28 @@ function Contact() {
     message: '',
   });
 
-  const [result, setResult] = useState(null);
+  // const [result, setResult] = useState(null);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    axios
-      .post('/send', { ...state })
-      .then((response) => {
-        setResult(response.data);
-        setState({
-          name: '',
-          email: '',
-          subject: '',
-          message: '',
-        });
-      })
-      .catch(() => {
-        setResult({
-          success: false,
-          message: 'Something went wrong. Try again later',
-        });
-      });
-  };
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   axios
+  //     .post('/send', { ...state })
+  //     .then((response) => {
+  //       setResult(response.data);
+  //       setState({
+  //         name: '',
+  //         email: '',
+  //         subject: '',
+  //         message: '',
+  //       });
+  //     })
+  //     .catch(() => {
+  //       setResult({
+  //         success: false,
+  //         message: 'Something went wrong. Try again later',
+  //       });
+  //     });
+  // };
 
   const handleChange = (event) => {
     const { id, value } = event.target;
@@ -42,43 +71,11 @@ function Contact() {
       [id]: value,
     });
   };
-  // const handleChange = event => {
-  //   const field = event.target.id;
-  //   if (field === 'name') {
-  //     setName(event.target.value);
-  //   } else if (field === 'email') {
-  //     setEmail(event.target.value);
-  //   } else if (field === 'message') {
-  //     setMessage(event.target.value);
-  //   }
-  // };
-
-  // const handleSubmit = event => {
-  //   event.preventDefault();
-  //   setStatus('Sending');
-  //   axios({
-  //     method: 'POST',
-  //     url: 'http://localhost:5000/contact',
-  //     data: useState,
-  //   }).then(response => {
-  //     if (response.data.status === 'sent') {
-  //       alert('Message Sent');
-  //       setName('');
-  //       setEmail('');
-  //       setMessage('');
-  //       setStatus('Submit');
-  //     } else if (response.data.status === 'failed') {
-  //       alert('Message Failed');
-  //     }
-  //   });
-  // };
-
-  // const buttonText = { status };
 
   return (
     <div className="contact-section container">
       <div className="contact__email">
-        <form className="contact-form" method="POST" onSubmit={handleSubmit}>
+        <form className="contact-form" method="POST" onSubmit={sendEmail}>
           <div className="contact-image">
             <i className="fas fa-rocket" />
           </div>
@@ -149,13 +146,13 @@ function Contact() {
               </button>
             </div>
           </div>
-          <div>
+          {/* <div>
             {result && (
               <p className={`${result.success ? 'success' : 'error'}`}>
                 {result.message}
               </p>
             )}
-          </div>
+          </div> */}
         </form>
       </div>
     </div>
