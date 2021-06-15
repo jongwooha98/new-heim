@@ -2,7 +2,19 @@
 import { Link } from 'react-router-dom';
 import './Navbar.scss';
 
-import logo from '../assets/logo.png';
+// Scroll to top of page(section) when navigating
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function Navbar() {
   const handleCollapse = () => {
@@ -16,6 +28,7 @@ function Navbar() {
   }
   return (
     <nav className="navbar sticky-top">
+      <ScrollToTop />
       <div className="navbar__container container-fluid">
         <Link className="navbar-brand" to="/">
           NEW HEIM
@@ -31,10 +44,22 @@ function Navbar() {
           aria-label="Toggle navigation"
           onClick={lockScroll}
         >
-          <i class="toggler-icon fas fa-bars" />
+          <i className="toggler-icon fas fa-bars" />
         </button>
 
         <div className="collapse navbar-collapse" id="navbarNav">
+          <div className="navbar-collapse__top">
+            <Link className="navbar-brand" to="/" onClick={handleCollapse}>
+              NEW HEIM
+            </Link>
+            <button
+              className="navbar-collapse__toggler"
+              onClick={handleCollapse}
+            >
+              <i className="toggler-icon far fa-times-circle" />
+            </button>
+          </div>
+
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link className="nav-link" to="/" onClick={handleCollapse}>
@@ -42,13 +67,13 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/team" onClick={handleCollapse}>
-                Who we are
+              <Link className="nav-link" to="/about" onClick={handleCollapse}>
+                About
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/pricing" onClick={handleCollapse}>
-                Pricing
+              <Link className="nav-link" to="/about" onClick={handleCollapse}>
+                Gallery
               </Link>
             </li>
             <li className="nav-item">
