@@ -6,9 +6,11 @@ function About() {
       <div className="about__container container-fluid">
         <div className="about__contents">
           <h1>
-            Food is our common ground, <br />a universial experience
+            <q>
+              Food is our common ground, <br />a universial experience
+            </q>
           </h1>
-          <p>We deliver </p>
+          <p id="demo"></p>
         </div>
       </div>
     </>
