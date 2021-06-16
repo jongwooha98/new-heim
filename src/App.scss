@@ -58,7 +58,9 @@ body {
       color: #fff;
       font-size: $sizeSm;
       text-align: center;
-      text-transform: capitalize;
+      @include --viewportMd {
+        font-size: $sizeMd;
+      }
     }
     .home__btns {
       margin-top: 3rem;

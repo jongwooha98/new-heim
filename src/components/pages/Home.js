@@ -7,7 +7,7 @@ function Home() {
     <div className="home__container container-fluid">
       <div className="home__contents">
         <h1>New Heim</h1>
-        <p>We bring </p>
+        <p>Authentic dishes from around the world to you</p>
         <div className="home__btns">
           <Button
             linkTo="/about"
