@@ -71,11 +71,7 @@ function Navbar() {
                 About
               </Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/about" onClick={handleCollapse}>
-                Recipes
-              </Link>
-            </li>
+
             <li className="nav-item">
               <Link className="nav-link" to="/team" onClick={handleCollapse}>
                 Team
