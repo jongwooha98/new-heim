@@ -4,7 +4,6 @@ import './App.scss';
 import Navbar from './components/Navbar';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
-// import Pricing from './components/pages/Pricing';
 import Team from './components/pages/Team';
 import Contact from './components/pages/Contact';
 
