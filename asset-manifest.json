@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/new-heim/static/css/main.c8e34c96.chunk.css",
-    "main.js": "/new-heim/static/js/main.0d9ec68a.chunk.js",
-    "main.js.map": "/new-heim/static/js/main.0d9ec68a.chunk.js.map",
+    "main.css": "/new-heim/static/css/main.75433ac0.chunk.css",
+    "main.js": "/new-heim/static/js/main.2954325b.chunk.js",
+    "main.js.map": "/new-heim/static/js/main.2954325b.chunk.js.map",
     "runtime-main.js": "/new-heim/static/js/runtime-main.245e60f2.js",
     "runtime-main.js.map": "/new-heim/static/js/runtime-main.245e60f2.js.map",
     "static/js/2.a1fb69af.chunk.js": "/new-heim/static/js/2.a1fb69af.chunk.js",
     "static/js/2.a1fb69af.chunk.js.map": "/new-heim/static/js/2.a1fb69af.chunk.js.map",
     "index.html": "/new-heim/index.html",
-    "static/css/main.c8e34c96.chunk.css.map": "/new-heim/static/css/main.c8e34c96.chunk.css.map",
+    "static/css/main.75433ac0.chunk.css.map": "/new-heim/static/css/main.75433ac0.chunk.css.map",
     "static/js/2.a1fb69af.chunk.js.LICENSE.txt": "/new-heim/static/js/2.a1fb69af.chunk.js.LICENSE.txt",
     "static/media/hyunsub.6e68bcd9.jpeg": "/new-heim/static/media/hyunsub.6e68bcd9.jpeg",
     "static/media/jongwoo.23c15e73.png": "/new-heim/static/media/jongwoo.23c15e73.png",
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.245e60f2.js",
     "static/js/2.a1fb69af.chunk.js",
-    "static/css/main.c8e34c96.chunk.css",
-    "static/js/main.0d9ec68a.chunk.js"
+    "static/css/main.75433ac0.chunk.css",
+    "static/js/main.2954325b.chunk.js"
   ]
 }
