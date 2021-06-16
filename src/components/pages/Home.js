@@ -7,7 +7,7 @@ function Home() {
     <div className="home__container container-fluid">
       <div className="home__contents">
         <h1>New Heim</h1>
-        <p>Food is our common ground, a universial experience</p>
+        <p>We bring </p>
         <div className="home__btns">
           <Button
             linkTo="/about"
@@ -21,7 +21,7 @@ function Home() {
             buttonStyle="btn--outline"
             buttonSize="btn--medium"
           >
-            CONTACT
+            RESERVE
           </Button>
         </div>
       </div>
